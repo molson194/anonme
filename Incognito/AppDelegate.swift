@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 import Parse
 
 @UIApplicationMain
@@ -27,7 +28,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initializeWithConfiguration(parseConfiguration)
         let rootView: UIViewController
         if PFUser.currentUser() != nil {
-            rootView = MessagesViewController()
+            let groupsViewController = GroupsViewController()
+            let messagesViewController = MessagesViewController()
+            let query = PFQuery(className: "Group")
+            query.whereKey("members", containsString: PFUser.currentUser()?.username)
+            query.orderByAscending("createdAt") // TODO: order by most recently updated
+            query.getFirstObjectInBackgroundWithBlock({ (object, error) in
+                if error != nil {
+                    // TODO: Display error
+                } else {
+                    messagesViewController.setObject(object!)
+                }
+            })
+            let membersViewController = MembersViewController()
+            groupsViewController.setMessagesController(messagesViewController)
+            messagesViewController.setMembersView(membersViewController)
+            let slideMenuController = SlideMenuController(mainViewController: messagesViewController, leftMenuViewController: groupsViewController, rightMenuViewController: membersViewController)
+            rootView = slideMenuController
         } else {
             rootView = LoginViewController()
         }

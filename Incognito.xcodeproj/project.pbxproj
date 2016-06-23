@@ -12,6 +12,8 @@
 		F04BACEF1D0904E0009875FC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F04BACEE1D0904E0009875FC /* Default-568h@2x.png */; };
 		F04BACF71D092689009875FC /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04BACF01D0924DF009875FC /* PhoneNumberKit.framework */; };
 		F04BACF81D092689009875FC /* PhoneNumberKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F04BACF01D0924DF009875FC /* PhoneNumberKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F061EBE21D11183F00CC37E9 /* NewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061EBE11D11183F00CC37E9 /* NewGroupViewController.swift */; };
+		F06B5E6A1D1389E10048CAFF /* AddMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06B5E691D1389E10048CAFF /* AddMembersViewController.swift */; };
 		F085C2171D0F99BA0015C49D /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F085C2161D0F99BA0015C49D /* VerificationViewController.swift */; };
 		F085C2191D0FB6840015C49D /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F085C2181D0FB6840015C49D /* MessagesViewController.swift */; };
 		F0914A761D0D18DF00CF4340 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0914A701D0D18DF00CF4340 /* ParseUI.framework */; };
@@ -32,6 +34,8 @@
 		F0914A8F1D0D209D00CF4340 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F0914A8E1D0D209D00CF4340 /* libsqlite3.tbd */; };
 		F098FFAC1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F098FFAB1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework */; };
 		F098FFAD1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F098FFAB1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F098FFAF1D10D3EA00CCCAA3 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098FFAE1D10D3EA00CCCAA3 /* GroupsViewController.swift */; };
+		F098FFB11D10D41400CCCAA3 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098FFB01D10D41400CCCAA3 /* MembersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +60,8 @@
 		F04BACEC1D08FBF9009875FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F04BACEE1D0904E0009875FC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Images/Default-568h@2x.png"; sourceTree = "<group>"; };
 		F04BACF01D0924DF009875FC /* PhoneNumberKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneNumberKit.framework; path = Frameworks/PhoneNumberKit.framework; sourceTree = "<group>"; };
+		F061EBE11D11183F00CC37E9 /* NewGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroupViewController.swift; sourceTree = "<group>"; };
+		F06B5E691D1389E10048CAFF /* AddMembersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMembersViewController.swift; sourceTree = "<group>"; };
 		F085C2161D0F99BA0015C49D /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		F085C2181D0FB6840015C49D /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		F0914A701D0D18DF00CF4340 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = "<group>"; };
@@ -75,6 +81,8 @@
 		F0914A8C1D0D209300CF4340 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F0914A8E1D0D209D00CF4340 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F098FFAB1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = Frameworks/SlideMenuControllerSwift.framework; sourceTree = "<group>"; };
+		F098FFAE1D10D3EA00CCCAA3 /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		F098FFB01D10D41400CCCAA3 /* MembersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +140,10 @@
 				F04BACEC1D08FBF9009875FC /* LoginViewController.swift */,
 				F085C2161D0F99BA0015C49D /* VerificationViewController.swift */,
 				F085C2181D0FB6840015C49D /* MessagesViewController.swift */,
+				F098FFAE1D10D3EA00CCCAA3 /* GroupsViewController.swift */,
+				F098FFB01D10D41400CCCAA3 /* MembersViewController.swift */,
+				F061EBE11D11183F00CC37E9 /* NewGroupViewController.swift */,
+				F06B5E691D1389E10048CAFF /* AddMembersViewController.swift */,
 			);
 			path = Incognito;
 			sourceTree = "<group>";
@@ -246,9 +258,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F085C2171D0F99BA0015C49D /* VerificationViewController.swift in Sources */,
+				F061EBE21D11183F00CC37E9 /* NewGroupViewController.swift in Sources */,
 				F04BACED1D08FBF9009875FC /* LoginViewController.swift in Sources */,
 				F085C2191D0FB6840015C49D /* MessagesViewController.swift in Sources */,
+				F06B5E6A1D1389E10048CAFF /* AddMembersViewController.swift in Sources */,
 				F04BACD61D08F832009875FC /* AppDelegate.swift in Sources */,
+				F098FFB11D10D41400CCCAA3 /* MembersViewController.swift in Sources */,
+				F098FFAF1D10D3EA00CCCAA3 /* GroupsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

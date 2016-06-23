@@ -41,7 +41,7 @@ class VerificationViewController: UIViewController {
         if String(user!["random"]) == verificationField.text {
             user!["isVerified"] = true
             user?.saveInBackground()
-            let messagesViewController : MessagesViewController = MessagesViewController()
+            let messagesViewController : MessagesViewController = MessagesViewController() // TODO: change to slide menu controller
             self.presentViewController(messagesViewController, animated: true, completion: nil)
         } else {
             // TODO: display error (verification code does not match)
