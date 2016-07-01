@@ -25,8 +25,8 @@ class NewGroupViewController: UIViewController {
         let navigationItem = UINavigationItem()
         navigationItem.title = "New Group"
         
-        let leftButton =  UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(goBack)) // TODO: icon
-        let rightButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(goNext)) // TODO: icon
+        let leftButton =  UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(goBack))
+        let rightButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(goNext))
         navigationItem.leftBarButtonItem = leftButton
         navigationItem.rightBarButtonItem = rightButton
         
@@ -48,12 +48,15 @@ class NewGroupViewController: UIViewController {
             let group = PFObject(className:"Group")
             group["name"] = groupName.text
             group["members"] = [(PFUser.currentUser()?.username)!]
+            group["updated"] = NSDate()
             let addMembersViewController : AddMembersViewController = AddMembersViewController()
             addMembersViewController.setGroup(group)
             addMembersViewController.setPreviousController(self)
             self.presentViewController(addMembersViewController, animated: true, completion: nil)
         } else {
-            // TODO: display error (must have a group name
+            let alert = UIAlertController(title: "Error", message: "Must have a group name", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     

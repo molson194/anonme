@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import SlideMenuControllerSwift
 
 class VerificationViewController: UIViewController {
     
@@ -41,10 +42,27 @@ class VerificationViewController: UIViewController {
         if String(user!["random"]) == verificationField.text {
             user!["isVerified"] = true
             user?.saveInBackground()
-            let messagesViewController : MessagesViewController = MessagesViewController() // TODO: change to slide menu controller
-            self.presentViewController(messagesViewController, animated: true, completion: nil)
+            
+            let groupsViewController = GroupsViewController()
+            let messagesViewController = MessagesViewController()
+            let query = PFQuery(className: "Group")
+            query.whereKey("members", containsString: user!.username)
+            query.orderByDescending("updated")
+            query.getFirstObjectInBackgroundWithBlock({ (object, error) in
+                if error == nil {
+                    messagesViewController.setObject(object!)
+                }
+            })
+            let membersViewController = MembersViewController()
+            groupsViewController.setMessagesController(messagesViewController)
+            messagesViewController.setMembersView(membersViewController)
+            let slideMenuController = SlideMenuController(mainViewController: messagesViewController, leftMenuViewController: groupsViewController, rightMenuViewController: membersViewController)
+            
+            self.presentViewController(slideMenuController, animated: true, completion: nil)
         } else {
-            // TODO: display error (verification code does not match)
+            let alert = UIAlertController(title: "Verification code does not match", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     

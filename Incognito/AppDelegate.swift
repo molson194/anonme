@@ -32,11 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let messagesViewController = MessagesViewController()
             let query = PFQuery(className: "Group")
             query.whereKey("members", containsString: PFUser.currentUser()?.username)
-            query.orderByAscending("createdAt") // TODO: order by most recently updated
+            query.orderByDescending("updated")
             query.getFirstObjectInBackgroundWithBlock({ (object, error) in
-                if error != nil {
-                    // TODO: Display error
-                } else {
+                if error == nil {
                     messagesViewController.setObject(object!)
                 }
             })

@@ -19,6 +19,7 @@ class AddMembersViewController: UIViewController, UITableViewDelegate, UITableVi
     var groupObject : PFObject!
     var groupMembers : [String] = []
     var viewController : UIViewController = UIViewController()
+    var outboundNumbers = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +31,8 @@ class AddMembersViewController: UIViewController, UITableViewDelegate, UITableVi
         let navigationItem = UINavigationItem()
         navigationItem.title = "Add Contacts"
         
-        let leftButton =  UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(goBack)) // TODO: icon
-        let rightButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(goDone)) // TODO: icon
+        let leftButton =  UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(goBack))
+        let rightButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(goDone))
         navigationItem.leftBarButtonItem = leftButton
         navigationItem.rightBarButtonItem = rightButton
         
@@ -42,7 +43,9 @@ class AddMembersViewController: UIViewController, UITableViewDelegate, UITableVi
         do {
             allContainers = try contactStore.containersMatchingPredicate(nil)
         } catch {
-            // TODO: Display error (error getting contact list)
+            let alert = UIAlertController(title: "Error getting contact list", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
         
         var allContacts: [CNContact] = []
@@ -53,7 +56,9 @@ class AddMembersViewController: UIViewController, UITableViewDelegate, UITableVi
                 let containerResults = try contactStore.unifiedContactsMatchingPredicate(fetchPredicate, keysToFetch: keysToFetch)
                 allContacts.appendContentsOf(containerResults)
             } catch {
-                // TODO: Display error (error getting contact list)
+                let alert = UIAlertController(title: "Error getting contact list", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
             }
         }
         
@@ -69,10 +74,12 @@ class AddMembersViewController: UIViewController, UITableViewDelegate, UITableVi
                     
                     if !groupMembers.contains(digits) {
                         let name = contact.givenName
+                        if name.characters.count > 0 {
                         if contacts[String(name[name.startIndex.advancedBy(0)])] == nil {
                             contacts[String(name[name.startIndex.advancedBy(0)])] = [contact];
                         } else {
-                        contacts[String(name[name.startIndex.advancedBy(0)])]?.append(contact)
+                            contacts[String(name[name.startIndex.advancedBy(0)])]?.append(contact)
+                        }
                         }
                     }
                 }
@@ -128,6 +135,7 @@ class AddMembersViewController: UIViewController, UITableViewDelegate, UITableVi
                     digits = "1" + digits
                 }
                 groupMembers.append(digits)
+                outboundNumbers = outboundNumbers + digits + "<"
             }
         }
         tableView.reloadData()
@@ -148,10 +156,10 @@ class AddMembersViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func goDone() {
         groupObject["members"] = groupMembers
-        // TODO: send text message to all groupMembers that they've been added to group
+        PFCloud.callFunctionInBackground("smsNewMembers", withParameters: ["phonenumber":outboundNumbers])
         groupObject.saveInBackground()
         self.dismissViewControllerAnimated(true, completion: nil)
-        viewController.dismissViewControllerAnimated(false, completion: nil) // TODO: Instead push home view controller?
+        viewController.dismissViewControllerAnimated(false, completion: nil)
     }
 
 }

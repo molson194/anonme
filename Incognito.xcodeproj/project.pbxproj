@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F03E8DC21D20C171003A77A8 /* SlackTextViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03E8DC11D20C171003A77A8 /* SlackTextViewController.framework */; };
+		F03E8DC31D20C171003A77A8 /* SlackTextViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F03E8DC11D20C171003A77A8 /* SlackTextViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F04BACD61D08F832009875FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BACD51D08F832009875FC /* AppDelegate.swift */; };
 		F04BACED1D08FBF9009875FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BACEC1D08FBF9009875FC /* LoginViewController.swift */; };
 		F04BACEF1D0904E0009875FC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F04BACEE1D0904E0009875FC /* Default-568h@2x.png */; };
@@ -32,10 +34,15 @@
 		F0914A8B1D0D208A00CF4340 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0914A8A1D0D208A00CF4340 /* SystemConfiguration.framework */; };
 		F0914A8D1D0D209300CF4340 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F0914A8C1D0D209300CF4340 /* libz.tbd */; };
 		F0914A8F1D0D209D00CF4340 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F0914A8E1D0D209D00CF4340 /* libsqlite3.tbd */; };
+		F093B2291D25EEAD008DE84A /* DefaultUserLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = F093B2281D25EEAD008DE84A /* DefaultUserLarge.png */; };
 		F098FFAC1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F098FFAB1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework */; };
 		F098FFAD1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F098FFAB1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F098FFAF1D10D3EA00CCCAA3 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098FFAE1D10D3EA00CCCAA3 /* GroupsViewController.swift */; };
 		F098FFB11D10D41400CCCAA3 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098FFB01D10D41400CCCAA3 /* MembersViewController.swift */; };
+		F0F885991D24CC8700C45C31 /* DefaultCell.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F885971D24CC8700C45C31 /* DefaultCell.png */; };
+		F0F8859A1D24CC8700C45C31 /* DefaultUser.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F885981D24CC8700C45C31 /* DefaultUser.png */; };
+		F0F8859C1D24DE2700C45C31 /* GroupIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F8859B1D24DE2700C45C31 /* GroupIcon.png */; };
+		F0F8859E1D24E00200C45C31 /* UserIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F8859D1D24E00200C45C31 /* UserIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +52,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F03E8DC31D20C171003A77A8 /* SlackTextViewController.framework in Embed Frameworks */,
 				F04BACF81D092689009875FC /* PhoneNumberKit.framework in Embed Frameworks */,
 				F098FFAD1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework in Embed Frameworks */,
 			);
@@ -54,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F03E8DC11D20C171003A77A8 /* SlackTextViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlackTextViewController.framework; path = Frameworks/SlackTextViewController.framework; sourceTree = "<group>"; };
 		F04BACD21D08F832009875FC /* Incognito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Incognito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04BACD51D08F832009875FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F04BACE41D08F832009875FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,9 +89,14 @@
 		F0914A8A1D0D208A00CF4340 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F0914A8C1D0D209300CF4340 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F0914A8E1D0D209D00CF4340 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F093B2281D25EEAD008DE84A /* DefaultUserLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DefaultUserLarge.png; path = Images/DefaultUserLarge.png; sourceTree = "<group>"; };
 		F098FFAB1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = Frameworks/SlideMenuControllerSwift.framework; sourceTree = "<group>"; };
 		F098FFAE1D10D3EA00CCCAA3 /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		F098FFB01D10D41400CCCAA3 /* MembersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
+		F0F885971D24CC8700C45C31 /* DefaultCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DefaultCell.png; path = Images/DefaultCell.png; sourceTree = "<group>"; };
+		F0F885981D24CC8700C45C31 /* DefaultUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DefaultUser.png; path = Images/DefaultUser.png; sourceTree = "<group>"; };
+		F0F8859B1D24DE2700C45C31 /* GroupIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GroupIcon.png; path = Images/GroupIcon.png; sourceTree = "<group>"; };
+		F0F8859D1D24E00200C45C31 /* UserIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UserIcon.png; path = Images/UserIcon.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,7 @@
 				F0914A811D0D206D00CF4340 /* CoreGraphics.framework in Frameworks */,
 				F0914A7F1D0D206700CF4340 /* CFNetwork.framework in Frameworks */,
 				F0914A7D1D0D206100CF4340 /* AudioToolbox.framework in Frameworks */,
+				F03E8DC21D20C171003A77A8 /* SlackTextViewController.framework in Frameworks */,
 				F0914A761D0D18DF00CF4340 /* ParseUI.framework in Frameworks */,
 				F0914A771D0D18DF00CF4340 /* ParseTwitterUtils.framework in Frameworks */,
 				F0914A781D0D18DF00CF4340 /* ParseFacebookUtilsV4.framework in Frameworks */,
@@ -153,6 +168,7 @@
 			children = (
 				F0914A8E1D0D209D00CF4340 /* libsqlite3.tbd */,
 				F0914A8C1D0D209300CF4340 /* libz.tbd */,
+				F03E8DC11D20C171003A77A8 /* SlackTextViewController.framework */,
 				F098FFAB1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework */,
 				F0914A8A1D0D208A00CF4340 /* SystemConfiguration.framework */,
 				F0914A881D0D208400CF4340 /* StoreKit.framework */,
@@ -176,7 +192,12 @@
 		F04BACF31D092523009875FC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F0F885971D24CC8700C45C31 /* DefaultCell.png */,
+				F0F885981D24CC8700C45C31 /* DefaultUser.png */,
 				F04BACEE1D0904E0009875FC /* Default-568h@2x.png */,
+				F0F8859B1D24DE2700C45C31 /* GroupIcon.png */,
+				F0F8859D1D24E00200C45C31 /* UserIcon.png */,
+				F093B2281D25EEAD008DE84A /* DefaultUserLarge.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -247,6 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F04BACEF1D0904E0009875FC /* Default-568h@2x.png in Resources */,
+				F0F8859A1D24CC8700C45C31 /* DefaultUser.png in Resources */,
+				F093B2291D25EEAD008DE84A /* DefaultUserLarge.png in Resources */,
+				F0F8859C1D24DE2700C45C31 /* GroupIcon.png in Resources */,
+				F0F8859E1D24E00200C45C31 /* UserIcon.png in Resources */,
+				F0F885991D24CC8700C45C31 /* DefaultCell.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

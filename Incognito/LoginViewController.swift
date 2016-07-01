@@ -9,6 +9,7 @@
 import UIKit
 import PhoneNumberKit
 import Parse
+import SlideMenuControllerSwift
 
 class LoginViewController: UIViewController {
     
@@ -68,9 +69,6 @@ class LoginViewController: UIViewController {
             }
             
             let random = arc4random_uniform(899999) + 100000;
-            print(random)
-            
-            // TODO: check to see if user already exists
             
             let user = PFUser()
             user.username = phoneNumber
@@ -78,13 +76,13 @@ class LoginViewController: UIViewController {
             user["name"] = nameField.text
             user["random"] = Double(random)
             user["isVerfied"] = false
-            // TODO: random photo as cover
             
             user.signUpInBackgroundWithBlock {
                 (succeeded: Bool, error: NSError?) -> Void in
                 if let error = error {
-                    print(error.userInfo["error"] as? NSString)
-                    // TODO: display error (Problem signing up)
+                    let alert = UIAlertController(title: "Error signing up", message: error.userInfo["error"] as! NSString as String, preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
                 } else {
                     PFCloud.callFunctionInBackground("smsLoginVerification", withParameters: ["phonenumber":phoneNumber, "messagebody":"Verification Code: " + String(random)])
                     let verificationViewController : VerificationViewController = VerificationViewController()
@@ -93,7 +91,9 @@ class LoginViewController: UIViewController {
             }
 
         } else {
-            // TODO: display error (Must enter valid US number)
+            let alert = UIAlertController(title: "Error", message: "Must enter valid US Number", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
@@ -108,10 +108,27 @@ class LoginViewController: UIViewController {
             PFUser.logInWithUsernameInBackground(phoneNumber, password:passwordField.text!) {
                 (user: PFUser?, error: NSError?) -> Void in
                 if user != nil {
-                    let messagesViewController : MessagesViewController = MessagesViewController()
-                    self.presentViewController(messagesViewController, animated: true, completion: nil)
+                    let groupsViewController = GroupsViewController()
+                    let messagesViewController = MessagesViewController()
+                    let query = PFQuery(className: "Group")
+                    query.whereKey("members", containsString: user!.username)
+                    query.orderByDescending("updated")
+                    query.getFirstObjectInBackgroundWithBlock({ (object, error) in
+                        if error == nil {
+                            messagesViewController.setObject(object!)
+                        }
+                    })
+                    let membersViewController = MembersViewController()
+                    groupsViewController.setMessagesController(messagesViewController)
+                    messagesViewController.setMembersView(membersViewController)
+                    let slideMenuController = SlideMenuController(mainViewController: messagesViewController, leftMenuViewController: groupsViewController, rightMenuViewController: membersViewController)
+                    
+                    self.presentViewController(slideMenuController, animated: true, completion: nil)
                 } else {
-                    // TODO: display error (issue logging in)
+                    let alert = UIAlertController(title: "Error logging in", message: error!.userInfo["error"] as! NSString as String, preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                    
                 }
             }
             
