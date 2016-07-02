@@ -11,11 +11,11 @@
 		F03E8DC31D20C171003A77A8 /* SlackTextViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F03E8DC11D20C171003A77A8 /* SlackTextViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F04BACD61D08F832009875FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BACD51D08F832009875FC /* AppDelegate.swift */; };
 		F04BACED1D08FBF9009875FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BACEC1D08FBF9009875FC /* LoginViewController.swift */; };
-		F04BACEF1D0904E0009875FC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F04BACEE1D0904E0009875FC /* Default-568h@2x.png */; };
 		F04BACF71D092689009875FC /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04BACF01D0924DF009875FC /* PhoneNumberKit.framework */; };
 		F04BACF81D092689009875FC /* PhoneNumberKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F04BACF01D0924DF009875FC /* PhoneNumberKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F061EBE21D11183F00CC37E9 /* NewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061EBE11D11183F00CC37E9 /* NewGroupViewController.swift */; };
 		F06B5E6A1D1389E10048CAFF /* AddMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06B5E691D1389E10048CAFF /* AddMembersViewController.swift */; };
+		F07796981D262531000AD97A /* anonme.png in Resources */ = {isa = PBXBuildFile; fileRef = F07796971D262531000AD97A /* anonme.png */; };
 		F085C2171D0F99BA0015C49D /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F085C2161D0F99BA0015C49D /* VerificationViewController.swift */; };
 		F085C2191D0FB6840015C49D /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F085C2181D0FB6840015C49D /* MessagesViewController.swift */; };
 		F0914A761D0D18DF00CF4340 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0914A701D0D18DF00CF4340 /* ParseUI.framework */; };
@@ -39,6 +39,17 @@
 		F098FFAD1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F098FFAB1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F098FFAF1D10D3EA00CCCAA3 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098FFAE1D10D3EA00CCCAA3 /* GroupsViewController.swift */; };
 		F098FFB11D10D41400CCCAA3 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098FFB01D10D41400CCCAA3 /* MembersViewController.swift */; };
+		F09CFEC61D275C7500C8A0CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F09CFEC51D275C7500C8A0CF /* Images.xcassets */; };
+		F09CFECE1D275CF900C8A0CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CFEC91D275CF900C8A0CF /* Default-568h@2x.png */; };
+		F09CFECF1D275CF900C8A0CF /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CFECA1D275CF900C8A0CF /* Default-667h@2x.png */; };
+		F09CFED01D275CF900C8A0CF /* Default-Landscape-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CFECB1D275CF900C8A0CF /* Default-Landscape-736h@3x.png */; };
+		F09CFED11D275CF900C8A0CF /* Default-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CFECC1D275CF900C8A0CF /* Default-Portrait-736h@3x.png */; };
+		F09CFED21D275CF900C8A0CF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CFECD1D275CF900C8A0CF /* Default@2x.png */; };
+		F09CFEF21D275D0900C8A0CF /* Icon-App@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CFED71D275D0900C8A0CF /* Icon-App@2x.png */; };
+		F09CFEF31D275D0900C8A0CF /* Icon-App@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CFED81D275D0900C8A0CF /* Icon-App@3x.png */; };
+		F09CFEF51D275D0900C8A0CF /* Icon-Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CFEDA1D275D0900C8A0CF /* Icon-Settings@2x.png */; };
+		F09CFEF61D275D0900C8A0CF /* Icon-Settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CFEDB1D275D0900C8A0CF /* Icon-Settings@3x.png */; };
+		F09CFEF71D275D0900C8A0CF /* Icon-Spotlight-iPhone-4-5.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CFEDC1D275D0900C8A0CF /* Icon-Spotlight-iPhone-4-5.png */; };
 		F0F885991D24CC8700C45C31 /* DefaultCell.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F885971D24CC8700C45C31 /* DefaultCell.png */; };
 		F0F8859A1D24CC8700C45C31 /* DefaultUser.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F885981D24CC8700C45C31 /* DefaultUser.png */; };
 		F0F8859C1D24DE2700C45C31 /* GroupIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F8859B1D24DE2700C45C31 /* GroupIcon.png */; };
@@ -67,10 +78,10 @@
 		F04BACD51D08F832009875FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F04BACE41D08F832009875FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F04BACEC1D08FBF9009875FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		F04BACEE1D0904E0009875FC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Images/Default-568h@2x.png"; sourceTree = "<group>"; };
 		F04BACF01D0924DF009875FC /* PhoneNumberKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneNumberKit.framework; path = Frameworks/PhoneNumberKit.framework; sourceTree = "<group>"; };
 		F061EBE11D11183F00CC37E9 /* NewGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroupViewController.swift; sourceTree = "<group>"; };
 		F06B5E691D1389E10048CAFF /* AddMembersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMembersViewController.swift; sourceTree = "<group>"; };
+		F07796971D262531000AD97A /* anonme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = anonme.png; path = Images/anonme.png; sourceTree = "<group>"; };
 		F085C2161D0F99BA0015C49D /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		F085C2181D0FB6840015C49D /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		F0914A701D0D18DF00CF4340 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = "<group>"; };
@@ -93,6 +104,17 @@
 		F098FFAB1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = Frameworks/SlideMenuControllerSwift.framework; sourceTree = "<group>"; };
 		F098FFAE1D10D3EA00CCCAA3 /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		F098FFB01D10D41400CCCAA3 /* MembersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
+		F09CFEC51D275C7500C8A0CF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F09CFEC91D275CF900C8A0CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Images/Splash/Default-568h@2x.png"; sourceTree = "<group>"; };
+		F09CFECA1D275CF900C8A0CF /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-667h@2x.png"; path = "Images/Splash/Default-667h@2x.png"; sourceTree = "<group>"; };
+		F09CFECB1D275CF900C8A0CF /* Default-Landscape-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape-736h@3x.png"; path = "Images/Splash/Default-Landscape-736h@3x.png"; sourceTree = "<group>"; };
+		F09CFECC1D275CF900C8A0CF /* Default-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait-736h@3x.png"; path = "Images/Splash/Default-Portrait-736h@3x.png"; sourceTree = "<group>"; };
+		F09CFECD1D275CF900C8A0CF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Images/Splash/Default@2x.png"; sourceTree = "<group>"; };
+		F09CFED71D275D0900C8A0CF /* Icon-App@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App@2x.png"; path = "Images/Icon/Icon-App@2x.png"; sourceTree = "<group>"; };
+		F09CFED81D275D0900C8A0CF /* Icon-App@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App@3x.png"; path = "Images/Icon/Icon-App@3x.png"; sourceTree = "<group>"; };
+		F09CFEDA1D275D0900C8A0CF /* Icon-Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Settings@2x.png"; path = "Images/Icon/Icon-Settings@2x.png"; sourceTree = "<group>"; };
+		F09CFEDB1D275D0900C8A0CF /* Icon-Settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Settings@3x.png"; path = "Images/Icon/Icon-Settings@3x.png"; sourceTree = "<group>"; };
+		F09CFEDC1D275D0900C8A0CF /* Icon-Spotlight-iPhone-4-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-iPhone-4-5.png"; path = "Images/Icon/Icon-Spotlight-iPhone-4-5.png"; sourceTree = "<group>"; };
 		F0F885971D24CC8700C45C31 /* DefaultCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DefaultCell.png; path = Images/DefaultCell.png; sourceTree = "<group>"; };
 		F0F885981D24CC8700C45C31 /* DefaultUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DefaultUser.png; path = Images/DefaultUser.png; sourceTree = "<group>"; };
 		F0F8859B1D24DE2700C45C31 /* GroupIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GroupIcon.png; path = Images/GroupIcon.png; sourceTree = "<group>"; };
@@ -159,6 +181,7 @@
 				F098FFB01D10D41400CCCAA3 /* MembersViewController.swift */,
 				F061EBE11D11183F00CC37E9 /* NewGroupViewController.swift */,
 				F06B5E691D1389E10048CAFF /* AddMembersViewController.swift */,
+				F09CFEC51D275C7500C8A0CF /* Images.xcassets */,
 			);
 			path = Incognito;
 			sourceTree = "<group>";
@@ -192,14 +215,40 @@
 		F04BACF31D092523009875FC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F09CFEC81D275CED00C8A0CF /* Splash */,
+				F09CFEC71D275CE700C8A0CF /* Icon */,
 				F0F885971D24CC8700C45C31 /* DefaultCell.png */,
 				F0F885981D24CC8700C45C31 /* DefaultUser.png */,
-				F04BACEE1D0904E0009875FC /* Default-568h@2x.png */,
+				F07796971D262531000AD97A /* anonme.png */,
 				F0F8859B1D24DE2700C45C31 /* GroupIcon.png */,
 				F0F8859D1D24E00200C45C31 /* UserIcon.png */,
 				F093B2281D25EEAD008DE84A /* DefaultUserLarge.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		F09CFEC71D275CE700C8A0CF /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				F09CFED71D275D0900C8A0CF /* Icon-App@2x.png */,
+				F09CFED81D275D0900C8A0CF /* Icon-App@3x.png */,
+				F09CFEDA1D275D0900C8A0CF /* Icon-Settings@2x.png */,
+				F09CFEDB1D275D0900C8A0CF /* Icon-Settings@3x.png */,
+				F09CFEDC1D275D0900C8A0CF /* Icon-Spotlight-iPhone-4-5.png */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+		F09CFEC81D275CED00C8A0CF /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				F09CFEC91D275CF900C8A0CF /* Default-568h@2x.png */,
+				F09CFECA1D275CF900C8A0CF /* Default-667h@2x.png */,
+				F09CFECB1D275CF900C8A0CF /* Default-Landscape-736h@3x.png */,
+				F09CFECC1D275CF900C8A0CF /* Default-Portrait-736h@3x.png */,
+				F09CFECD1D275CF900C8A0CF /* Default@2x.png */,
+			);
+			name = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,12 +316,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F04BACEF1D0904E0009875FC /* Default-568h@2x.png in Resources */,
+				F09CFEF31D275D0900C8A0CF /* Icon-App@3x.png in Resources */,
+				F09CFEC61D275C7500C8A0CF /* Images.xcassets in Resources */,
+				F09CFED11D275CF900C8A0CF /* Default-Portrait-736h@3x.png in Resources */,
+				F09CFECE1D275CF900C8A0CF /* Default-568h@2x.png in Resources */,
+				F09CFEF51D275D0900C8A0CF /* Icon-Settings@2x.png in Resources */,
+				F09CFED21D275CF900C8A0CF /* Default@2x.png in Resources */,
 				F0F8859A1D24CC8700C45C31 /* DefaultUser.png in Resources */,
 				F093B2291D25EEAD008DE84A /* DefaultUserLarge.png in Resources */,
 				F0F8859C1D24DE2700C45C31 /* GroupIcon.png in Resources */,
 				F0F8859E1D24E00200C45C31 /* UserIcon.png in Resources */,
+				F09CFEF21D275D0900C8A0CF /* Icon-App@2x.png in Resources */,
+				F09CFEF61D275D0900C8A0CF /* Icon-Settings@3x.png in Resources */,
 				F0F885991D24CC8700C45C31 /* DefaultCell.png in Resources */,
+				F09CFEF71D275D0900C8A0CF /* Icon-Spotlight-iPhone-4-5.png in Resources */,
+				F07796981D262531000AD97A /* anonme.png in Resources */,
+				F09CFECF1D275CF900C8A0CF /* Default-667h@2x.png in Resources */,
+				F09CFED01D275CF900C8A0CF /* Default-Landscape-736h@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +443,8 @@
 		F04BACE81D08F832009875FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -399,6 +461,8 @@
 		F04BACE91D08F832009875FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

@@ -34,16 +34,21 @@ class MessagesViewController: SLKTextViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.textView.placeholder = "Message"
+        
         self.view.backgroundColor = UIColor.whiteColor()
         
         let navigationBar = UINavigationBar(frame: CGRectMake(0, 0, self.view.frame.size.width, 64))
         
-        navigationBar.backgroundColor = UIColor.blueColor()
+        navigationBar.barTintColor = UIColor.orangeColor()
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         navItem.title = "No Groups :("
         
         let leftButton =  UIBarButtonItem(image: UIImage(named: "GroupIcon.png"), style: .Plain, target: self, action: #selector(viewGroups))
+        leftButton.tintColor = UIColor.whiteColor()
         let rightButton = UIBarButtonItem(image: UIImage(named: "UserIcon.png"), style: .Plain, target: self, action: #selector(viewMembers))
+        rightButton.tintColor = UIColor.whiteColor()
         navItem.leftBarButtonItem = leftButton
         navItem.rightBarButtonItem = rightButton
         
@@ -69,7 +74,7 @@ class MessagesViewController: SLKTextViewController {
     func setObject(object : PFObject) {
         groupObject = object
         navItem.title = groupObject.objectForKey("name") as? String
-        
+        membersViewController.setObject(groupObject)
         queryAmount = 50
         
         self.reloadText()
@@ -114,7 +119,6 @@ class MessagesViewController: SLKTextViewController {
     
     func viewMembers() {
         if (groupObject != nil) {
-            membersViewController.setObject(groupObject)
             self.slideMenuController()?.openRight()
         }
     }

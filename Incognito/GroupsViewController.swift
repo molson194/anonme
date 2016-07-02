@@ -35,7 +35,7 @@ class GroupsViewController: PFQueryTableViewController, UIImagePickerControllerD
         
         let createGroupButton = UIButton(frame: CGRectMake(20, 225, 230, 40))
         createGroupButton.setTitle("Create Group", forState: UIControlState.Normal)
-        createGroupButton.backgroundColor = UIColor.blueColor()
+        createGroupButton.backgroundColor = UIColor.orangeColor()
         createGroupButton.addTarget(self, action: #selector(createGroup), forControlEvents: UIControlEvents.TouchUpInside)
         headerView.addSubview(createGroupButton)
         

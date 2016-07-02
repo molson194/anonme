@@ -31,7 +31,7 @@ class VerificationViewController: UIViewController {
         self.view.addSubview(verificationField)
         
         verifyButton.setTitle("Sign Up", forState: UIControlState.Normal)
-        verifyButton.backgroundColor = UIColor.blueColor()
+        verifyButton.backgroundColor = UIColor.orangeColor()
         verifyButton.addTarget(self, action: #selector(verifyPressed), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(verifyButton)
         

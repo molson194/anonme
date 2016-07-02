@@ -20,13 +20,16 @@ class NewGroupViewController: UIViewController {
         
         let navigationBar = UINavigationBar(frame: CGRectMake(0, 0, self.view.frame.size.width, 64))
         
-        navigationBar.backgroundColor = UIColor.blueColor()
+        navigationBar.barTintColor = UIColor.orangeColor()
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         let navigationItem = UINavigationItem()
         navigationItem.title = "New Group"
         
         let leftButton =  UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(goBack))
+        leftButton.tintColor = UIColor.whiteColor()
         let rightButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(goNext))
+        rightButton.tintColor = UIColor.whiteColor()
         navigationItem.leftBarButtonItem = leftButton
         navigationItem.rightBarButtonItem = rightButton
         

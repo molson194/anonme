@@ -13,32 +13,33 @@ import SlideMenuControllerSwift
 
 class LoginViewController: UIViewController {
     
-    let nameField = UITextField(frame: CGRectMake(20, 100, UIScreen.mainScreen().bounds.width-40, 40))
+    let nameField = UITextField(frame: CGRectMake(20, 170, UIScreen.mainScreen().bounds.width-40, 40))
     let phoneField = PhoneNumberTextField()
-    let passwordField = UITextField(frame: CGRectMake(20, 180, UIScreen.mainScreen().bounds.width-40, 40))
-    let signUpButton = UIButton(frame: CGRectMake(20, 220, UIScreen.mainScreen().bounds.width-40, 40))
-    let signInButton = UIButton(frame: CGRectMake(20, 220, UIScreen.mainScreen().bounds.width-40, 40))
+    let passwordField = UITextField(frame: CGRectMake(20, 250, UIScreen.mainScreen().bounds.width-40, 40))
+    let signUpButton = UIButton(frame: CGRectMake(20, 300, UIScreen.mainScreen().bounds.width-40, 40))
+    let signInButton = UIButton(frame: CGRectMake(20, 300, UIScreen.mainScreen().bounds.width-40, 40))
+    var imageView = UIImageView(frame: CGRectMake(UIScreen.mainScreen().bounds.width/2-55, 60, 110, 110))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.orangeColor()
         
         let options = ["Sign Up", "Sign In"]
         let sc = UISegmentedControl(items: options)
         sc.frame = CGRectMake(20, 20, UIScreen.mainScreen().bounds.width-40, 40)
         sc.selectedSegmentIndex = 0
+        sc.backgroundColor = UIColor.orangeColor()
+        sc.tintColor = UIColor.whiteColor()
         sc.addTarget(self, action: #selector(changedSC), forControlEvents: UIControlEvents.ValueChanged)
         self.view.addSubview(sc)
-        
-        // TODO: Logo at top
         
         nameField.placeholder = "Full Name"
         nameField.borderStyle = UITextBorderStyle.RoundedRect
         nameField.autocorrectionType = UITextAutocorrectionType.No
         self.view.addSubview(nameField)
         
-        phoneField.frame = CGRectMake(20, 140, UIScreen.mainScreen().bounds.width-40, 40)
+        phoneField.frame = CGRectMake(20, 210, UIScreen.mainScreen().bounds.width-40, 40)
         phoneField.placeholder = "Mobile Number"
         phoneField.borderStyle = UITextBorderStyle.RoundedRect
         self.view.addSubview(phoneField)
@@ -49,13 +50,19 @@ class LoginViewController: UIViewController {
         self.view.addSubview(passwordField)
         
         signUpButton.setTitle("Sign Up", forState: UIControlState.Normal)
-        signUpButton.backgroundColor = UIColor.blueColor()
+        signUpButton.backgroundColor = UIColor.whiteColor()
+        signUpButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
         signUpButton.addTarget(self, action: #selector(signUpPressed), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(signUpButton)
         
         signInButton.setTitle("Sign In", forState: UIControlState.Normal)
-        signInButton.backgroundColor = UIColor.blueColor()
+        signInButton.backgroundColor = UIColor.whiteColor()
+        signInButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
         signInButton.addTarget(self, action: #selector(signInPressed), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        let image = UIImage(named: "anonme.png")
+        imageView.image = image
+        self.view.addSubview(imageView)
         
     }
     
@@ -140,10 +147,12 @@ class LoginViewController: UIViewController {
             self.view.addSubview(nameField)
             self.view.addSubview(signUpButton)
             signInButton.removeFromSuperview()
+            imageView.frame = CGRectMake(UIScreen.mainScreen().bounds.width/2-55, 60, 110, 110)
         } else {
             nameField.removeFromSuperview()
             signUpButton.removeFromSuperview()
             self.view.addSubview(signInButton)
+            imageView.frame = CGRectMake(UIScreen.mainScreen().bounds.width/2-55, 80, 110, 110)
         }
         
     }

@@ -20,7 +20,8 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         let navigationBar = UINavigationBar(frame: CGRectMake(0, 0, 270, 64))
-        navigationBar.backgroundColor = UIColor.blueColor()
+        navigationBar.barTintColor = UIColor.orangeColor()
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         let navigationItem = UINavigationItem()
         navigationItem.title = "Members"
         navigationBar.items = [navigationItem]
@@ -30,7 +31,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let addMembersButton = UIButton(frame: CGRectMake(20, 10, 230, 40))
         addMembersButton.setTitle("Add Members", forState: UIControlState.Normal)
-        addMembersButton.backgroundColor = UIColor.blueColor()
+        addMembersButton.backgroundColor = UIColor.orangeColor()
         addMembersButton.addTarget(self, action: #selector(addMembers), forControlEvents: UIControlEvents.TouchUpInside)
         headerView.addSubview(addMembersButton)
         

@@ -20,19 +20,23 @@ class AddMembersViewController: UIViewController, UITableViewDelegate, UITableVi
     var groupMembers : [String] = []
     var viewController : UIViewController = UIViewController()
     var outboundNumbers = ""
+    var sortedContacts: [(String, [CNContact])]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let navigationBar = UINavigationBar(frame: CGRectMake(0, 0, self.view.frame.size.width, 64))
         
-        navigationBar.backgroundColor = UIColor.blueColor()
+        navigationBar.barTintColor = UIColor.orangeColor()
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         let navigationItem = UINavigationItem()
         navigationItem.title = "Add Contacts"
         
         let leftButton =  UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(goBack))
+        leftButton.tintColor = UIColor.whiteColor()
         let rightButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(goDone))
+        rightButton.tintColor = UIColor.whiteColor()
         navigationItem.leftBarButtonItem = leftButton
         navigationItem.rightBarButtonItem = rightButton
         
@@ -86,6 +90,8 @@ class AddMembersViewController: UIViewController, UITableViewDelegate, UITableVi
             }
         }
         
+        sortedContacts = contacts.sort{ $0.0 < $1.0 }
+        
         tableView = UITableView(frame: CGRectMake(0, 64, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height-64), style: UITableViewStyle.Plain)
         tableView.delegate      =   self
         tableView.dataSource    =   self
@@ -105,15 +111,15 @@ class AddMembersViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        let index = contacts.startIndex.advancedBy(section)
-        return contacts[contacts.keys[index]]!.count
+        let (_, myContacts) = sortedContacts[section]
+        return myContacts.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let section = contacts.startIndex.advancedBy(indexPath.section)
         let cell:UITableViewCell=UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")
-        cell.textLabel!.text = contacts[contacts.keys[section]]![indexPath.row].givenName + " " + contacts[contacts.keys[section]]![indexPath.row].familyName
+        let (_, myContacts) = sortedContacts[indexPath.section]
+        cell.textLabel!.text = myContacts[indexPath.row].givenName + " " + myContacts[indexPath.row].familyName
         
         let label = UILabel(frame: CGRectMake(UIScreen.mainScreen().bounds.width-50, 0, 50, cell.bounds.height))
         label.textAlignment = NSTextAlignment.Center
@@ -124,9 +130,10 @@ class AddMembersViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        let section = contacts.startIndex.advancedBy(indexPath.section)
-        let contact = contacts[contacts.keys[section]]?.removeAtIndex(indexPath.row)
-        for phoneNumber in contact!.phoneNumbers {
+        var (letter, myContacts) = sortedContacts[indexPath.section]
+        let contact = myContacts.removeAtIndex(indexPath.row)
+        sortedContacts[indexPath.section] = (letter,myContacts)
+        for phoneNumber in contact.phoneNumbers {
             if phoneNumber.label == "_$!<Mobile>!$_" {
                 let number = phoneNumber.value as! CNPhoneNumber
                 let numberString = number.stringValue
@@ -142,12 +149,12 @@ class AddMembersViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return contacts.count
+        return sortedContacts.count
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let index = contacts.startIndex.advancedBy(section)
-        return contacts.keys[index]
+        let (letter, _) = sortedContacts[section]
+        return letter
     }
     
     func goBack() {
