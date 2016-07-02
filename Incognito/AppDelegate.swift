@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow()
         
         let parseConfiguration = ParseClientConfiguration { (ParseMutableClientConfiguration) in
-            ParseMutableClientConfiguration.applicationId = "molsonINCOG1423"
-            ParseMutableClientConfiguration.clientKey = "kingDUKEcheetah1029"
+            ParseMutableClientConfiguration.applicationId = "xxxxxxxxxxx" // TODO: change to appId
+            ParseMutableClientConfiguration.clientKey = "xxxxxxxxxxxxx" // TODO: change to clientKey
             ParseMutableClientConfiguration.server = "https://in-cog.herokuapp.com/parse"
         }
         

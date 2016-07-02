@@ -14,6 +14,8 @@
 		F04BACF71D092689009875FC /* PhoneNumberKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04BACF01D0924DF009875FC /* PhoneNumberKit.framework */; };
 		F04BACF81D092689009875FC /* PhoneNumberKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F04BACF01D0924DF009875FC /* PhoneNumberKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F061EBE21D11183F00CC37E9 /* NewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061EBE11D11183F00CC37E9 /* NewGroupViewController.swift */; };
+		F0623B191D2773810064EB90 /* SlideMenuControllerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0623B181D2773810064EB90 /* SlideMenuControllerSwift.framework */; };
+		F0623B1A1D2773810064EB90 /* SlideMenuControllerSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0623B181D2773810064EB90 /* SlideMenuControllerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F06B5E6A1D1389E10048CAFF /* AddMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06B5E691D1389E10048CAFF /* AddMembersViewController.swift */; };
 		F07796981D262531000AD97A /* anonme.png in Resources */ = {isa = PBXBuildFile; fileRef = F07796971D262531000AD97A /* anonme.png */; };
 		F085C2171D0F99BA0015C49D /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F085C2161D0F99BA0015C49D /* VerificationViewController.swift */; };
@@ -35,8 +37,6 @@
 		F0914A8D1D0D209300CF4340 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F0914A8C1D0D209300CF4340 /* libz.tbd */; };
 		F0914A8F1D0D209D00CF4340 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F0914A8E1D0D209D00CF4340 /* libsqlite3.tbd */; };
 		F093B2291D25EEAD008DE84A /* DefaultUserLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = F093B2281D25EEAD008DE84A /* DefaultUserLarge.png */; };
-		F098FFAC1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F098FFAB1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework */; };
-		F098FFAD1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F098FFAB1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F098FFAF1D10D3EA00CCCAA3 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098FFAE1D10D3EA00CCCAA3 /* GroupsViewController.swift */; };
 		F098FFB11D10D41400CCCAA3 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098FFB01D10D41400CCCAA3 /* MembersViewController.swift */; };
 		F09CFEC61D275C7500C8A0CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F09CFEC51D275C7500C8A0CF /* Images.xcassets */; };
@@ -63,9 +63,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F0623B1A1D2773810064EB90 /* SlideMenuControllerSwift.framework in Embed Frameworks */,
 				F03E8DC31D20C171003A77A8 /* SlackTextViewController.framework in Embed Frameworks */,
 				F04BACF81D092689009875FC /* PhoneNumberKit.framework in Embed Frameworks */,
-				F098FFAD1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +80,7 @@
 		F04BACEC1D08FBF9009875FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F04BACF01D0924DF009875FC /* PhoneNumberKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneNumberKit.framework; path = Frameworks/PhoneNumberKit.framework; sourceTree = "<group>"; };
 		F061EBE11D11183F00CC37E9 /* NewGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroupViewController.swift; sourceTree = "<group>"; };
+		F0623B181D2773810064EB90 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = Frameworks/SlideMenuControllerSwift.framework; sourceTree = "<group>"; };
 		F06B5E691D1389E10048CAFF /* AddMembersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMembersViewController.swift; sourceTree = "<group>"; };
 		F07796971D262531000AD97A /* anonme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = anonme.png; path = Images/anonme.png; sourceTree = "<group>"; };
 		F085C2161D0F99BA0015C49D /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -139,10 +140,10 @@
 				F03E8DC21D20C171003A77A8 /* SlackTextViewController.framework in Frameworks */,
 				F0914A761D0D18DF00CF4340 /* ParseUI.framework in Frameworks */,
 				F0914A771D0D18DF00CF4340 /* ParseTwitterUtils.framework in Frameworks */,
+				F0623B191D2773810064EB90 /* SlideMenuControllerSwift.framework in Frameworks */,
 				F0914A781D0D18DF00CF4340 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				F0914A791D0D18DF00CF4340 /* ParseFacebookUtils.framework in Frameworks */,
 				F0914A7A1D0D18DF00CF4340 /* Parse.framework in Frameworks */,
-				F098FFAC1D10CFBA00CCCAA3 /* SlideMenuControllerSwift.framework in Frameworks */,
 				F04BACF71D092689009875FC /* PhoneNumberKit.framework in Frameworks */,
 				F0914A7B1D0D18DF00CF4340 /* Bolts.framework in Frameworks */,
 			);
@@ -189,6 +190,7 @@
 		F04BACF21D0924E8009875FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0623B181D2773810064EB90 /* SlideMenuControllerSwift.framework */,
 				F0914A8E1D0D209D00CF4340 /* libsqlite3.tbd */,
 				F0914A8C1D0D209300CF4340 /* libz.tbd */,
 				F03E8DC11D20C171003A77A8 /* SlackTextViewController.framework */,
@@ -262,6 +264,7 @@
 				F04BACCF1D08F832009875FC /* Frameworks */,
 				F04BACD01D08F832009875FC /* Resources */,
 				F04BACF91D092689009875FC /* Embed Frameworks */,
+				F0623B1B1D27745C0064EB90 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -337,6 +340,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F0623B1B1D27745C0064EB90 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F04BACCE1D08F832009875FC /* Sources */ = {

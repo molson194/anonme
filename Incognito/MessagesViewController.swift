@@ -96,7 +96,7 @@ class MessagesViewController: SLKTextViewController {
         query.findObjectsInBackgroundWithBlock { (messages, error) in
             if error == nil && messages?.count > 0 {
                 for message in messages! {
-                    self.scroll?.text = String(message.objectForKey("text")!) + " " + (self.scroll?.text)!
+                    self.scroll?.text = String(message.objectForKey("text")!) + "\n\n" + (self.scroll?.text)!
                 }
                 if self.queryAmount == 50 && self.scroll!.contentSize.height > (self.scroll?.frame.size.height)!{
                     self.scroll?.setContentOffset(CGPointMake(0, self.scroll!.contentSize.height-(self.scroll?.frame.size.height)!), animated: false)
